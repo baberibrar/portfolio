@@ -19,12 +19,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-r@k@n6%h=b25nyp0hqparo$vkmtsa6wt+i^6*jmy(61f35dt$!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'portfolio-production-8644.up.railway.app', 'baberibrar.me', 'www.baberibrar.me']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'baberportfolio.herokuapp.com', 'www.baberibrar.me', 'baberibrar.me']
 
 # Application definition
 
@@ -132,4 +132,3 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
     DEBUG = False
-
