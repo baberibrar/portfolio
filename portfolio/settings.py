@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-r@k@n6%h=b25nyp0hqparo$vkmtsa6wt+i^6*jmy(61f35dt$!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.baberibrar.me', 'baberibrar.me', '*']
+ALLOWED_HOSTS = ['www.baberibrar.me', 'baberibrar.me', '*', '.vercel.app', '.now.sh']
 
 # Application definition
 
@@ -114,7 +114,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 STATIC_URL = '/static/'
 
